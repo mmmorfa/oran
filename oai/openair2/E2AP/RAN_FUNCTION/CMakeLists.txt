@@ -35,6 +35,7 @@ add_library(e2_ran_func_du_cucp_cuup STATIC
             CUSTOMIZED/ran_func_rlc.c
             CUSTOMIZED/ran_func_slice.c
             CUSTOMIZED/ran_func_tc.c
+            CUSTOMIZED/ran_func_new.c
             ../flexric/test/rnd/fill_rnd_data_tc.c
             ../flexric/test/rnd/fill_rnd_data_slice.c
             )

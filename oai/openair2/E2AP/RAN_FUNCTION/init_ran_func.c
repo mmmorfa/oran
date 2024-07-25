@@ -27,6 +27,7 @@
 #include "CUSTOMIZED/ran_func_mac.h"
 #include "CUSTOMIZED/ran_func_rlc.h"
 #include "CUSTOMIZED/ran_func_slice.h"
+#include "CUSTOMIZED/ran_func_new.h"
 #endif
 #if defined (NGRAN_GNB_CUUP)
 #include "CUSTOMIZED/ran_func_tc.h"
@@ -44,6 +45,7 @@ void init_read_ind_tbl(read_ind_fp (*read_ind_tbl)[SM_AGENT_IF_READ_V0_END])
   (*read_ind_tbl)[MAC_STATS_V0] =  read_mac_sm;
   (*read_ind_tbl)[RLC_STATS_V0] =  read_rlc_sm ;
   (*read_ind_tbl)[SLICE_STATS_V0] = read_slice_sm ;
+  (*read_ind_tbl)[NEW_STATS_V0] =  read_new_sm;
   #endif
   #if defined (NGRAN_GNB_CUUP)
   (*read_ind_tbl)[TC_STATS_V0] = read_tc_sm ;
@@ -62,6 +64,7 @@ void init_read_setup_tbl(read_e2_setup_fp (*read_setup_tbl)[SM_AGENT_IF_E2_SETUP
   (*read_setup_tbl)[MAC_AGENT_IF_E2_SETUP_ANS_V0] =  read_mac_setup_sm;
   (*read_setup_tbl)[RLC_AGENT_IF_E2_SETUP_ANS_V0] =  read_rlc_setup_sm ;
   (*read_setup_tbl)[SLICE_AGENT_IF_E2_SETUP_ANS_V0] =  read_slice_setup_sm ;
+  (*read_setup_tbl)[NEW_AGENT_IF_E2_SETUP_ANS_V0] =  read_new_setup_sm;
   #endif
   #if defined (NGRAN_GNB_CUUP)
   (*read_setup_tbl)[TC_AGENT_IF_E2_SETUP_ANS_V0] =  read_tc_setup_sm ;
@@ -80,6 +83,7 @@ void init_write_ctrl( write_ctrl_fp (*write_ctrl_tbl)[SM_AGENT_IF_WRITE_CTRL_V0_
   (*write_ctrl_tbl)[MAC_CTRL_REQ_V0] = write_ctrl_mac_sm;
   (*write_ctrl_tbl)[RLC_CTRL_REQ_V0] = write_ctrl_rlc_sm;
   (*write_ctrl_tbl)[SLICE_CTRL_REQ_V0] = write_ctrl_slice_sm;
+  (*write_ctrl_tbl)[NEW_CTRL_REQ_V0] = write_ctrl_new_sm;
   #endif
   #if defined (NGRAN_GNB_CUUP)
   (*write_ctrl_tbl)[TC_CTRL_REQ_V0] = write_ctrl_tc_sm;
@@ -97,6 +101,7 @@ void init_write_subs(write_subs_fp (*write_subs_tbl)[SM_AGENT_IF_WRITE_SUBS_V0_E
   (*write_subs_tbl)[MAC_SUBS_V0] = NULL;
   (*write_subs_tbl)[RLC_SUBS_V0] = NULL;
   (*write_subs_tbl)[SLICE_SUBS_V0] = NULL;
+  (*write_subs_tbl)[NEW_SUBS_V0] = NULL;
   #endif
   #if defined (NGRAN_GNB_CUUP)
   (*write_subs_tbl)[TC_SUBS_V0] = NULL;
